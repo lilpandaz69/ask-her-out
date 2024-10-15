@@ -15,6 +15,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
+            padding: 0 15px; /* Add padding to avoid edges touching the screen */
         }
 
         .main-container {
@@ -68,6 +69,65 @@
             font-size: 24px;
             color: #333;
             display: none; /* Hidden by default */
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 30px;
+                max-width: 400px; /* Adjust the width for tablets */
+            }
+
+            .main-container h1 {
+                font-size: 28px; /* Smaller title for tablets */
+            }
+
+            label {
+                font-size: 16px; /* Adjust label font size */
+            }
+
+            input[type="date"],
+            select {
+                font-size: 14px; /* Adjust input and select font size for tablets */
+            }
+
+            button {
+                font-size: 16px; /* Adjust button font size */
+                padding: 8px 16px; /* Adjust button padding */
+            }
+
+            #message {
+                font-size: 20px; /* Adjust message font size */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-container {
+                padding: 20px;
+                max-width: 320px; /* Adjust the width for mobile */
+            }
+
+            .main-container h1 {
+                font-size: 24px; /* Smaller title for mobile */
+            }
+
+            label {
+                font-size: 14px; /* Adjust label font size for mobile */
+            }
+
+            input[type="date"],
+            select {
+                font-size: 12px; /* Adjust input and select font size for mobile */
+            }
+
+            button {
+                font-size: 14px; /* Adjust button font size */
+                padding: 8px 12px; /* Adjust button padding for mobile */
+            }
+
+            #message {
+                font-size: 18px; /* Adjust message font size for mobile */
+            }
         }
     </style>
 </head>
