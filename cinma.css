@@ -6,6 +6,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 0 15px; /* Add padding to avoid content touching edges */
 }
 
 .main-container {
@@ -61,4 +62,49 @@ body {
 
 .box a:hover {
     background-color: #555;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .main-container {
+        max-width: 700px; /* Adjust container width */
+    }
+
+    .box {
+        width: 180px; /* Adjust box width for tablet size */
+    }
+}
+
+@media (max-width: 768px) {
+    .main-container {
+        max-width: 600px; /* Narrower container for smaller screens */
+    }
+
+    .box {
+        width: 45%; /* Display boxes in two columns on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .main-container {
+        padding: 20px; /* Reduce padding on mobile */
+    }
+
+    .main-container h1 {
+        font-size: 26px; /* Adjust heading size */
+    }
+
+    #container {
+        flex-direction: column; /* Stack boxes vertically */
+        align-items: center; /* Center the boxes */
+    }
+
+    .box {
+        width: 100%; /* Full width for mobile */
+        max-width: 300px; /* Max width to prevent oversized boxes */
+    }
+
+    .box a {
+        padding: 8px 12px; /* Adjust button padding for mobile */
+    }
 }
