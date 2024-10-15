@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask her out</title>
+    <link rel="stylesheet" href="ask.css">
+</head>
+<body>
+    <div id="container">
+        <h2>Would you like to go out with me?</h2>
+        <button id="yesButton" onclick="redirectToHappyPage()">Yes</button>
+        <button id="noButton" onclick="moveNoButton()">No</button>
+    </div>
+    <script>
+    function redirectToHappyPage() {
+        window.location.href = 'happy.html';
+    }
+
+    function moveNoButton() {
+        var noButton = document.getElementById('noButton');
+        var maxX = window.innerWidth - noButton.clientWidth;
+        var maxY = window.innerHeight - noButton.clientHeight;
+
+        var randomX = Math.floor(Math.random() * maxX);
+        var randomY = Math.floor(Math.random() * maxY);
+
+        noButton.style.position = 'absolute';
+        noButton.style.left = randomX + 'px';
+        noButton.style.top = randomY + 'px';
+    }
+    </script>
+</body>
+</html>

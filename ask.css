@@ -1,0 +1,112 @@
+body {
+    font-family: 'Georgia Pro', sans-serif; /* Fun font */
+    background-color: #ffcccb; /* Softer pink background */
+    background: linear-gradient(135deg, #ffcccb, #ff99aa); /* Gradient for more depth */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    animation: fadeInBackground 2s ease-in-out; /* Fade-in background animation */
+}
+
+#container {
+    padding: 20px;
+    width: 90%; /* Adjust for smaller screens */
+    max-width: 300px; /* Limit the width */
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease-in-out;
+    animation: bounceIn 1s ease-out;
+}
+
+h2 {
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    animation: fadeInText 1.5s ease;
+    font-size: 1.5em;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px; 
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+#yesButton {
+    background-color: #4caf50; 
+    color: #fff;
+}
+
+#noButton {
+    background-color: #ff6666; 
+    color: #fff;
+}
+
+#noButton:hover, #yesButton:hover {
+    background-color: #333; 
+    color: #ffcccb; /* Changes on hover */
+    transform: scale(1.15) rotate(5deg); /* Added rotation for a playful effect */
+}
+
+@keyframes bounceIn {
+    0% { transform: scale(0.5); opacity: 0; }
+    60% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeInBackground {
+    0% { background-color: #ffc0cb; opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #container {
+        width: 100%;
+        max-width: 250px;
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #container {
+        width: 100%;
+        max-width: 220px;
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}
